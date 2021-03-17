@@ -14,8 +14,8 @@ namespace Final_Seed
 {
     public partial class DisplayForm : Form
     {
-        NameForm enForm = new NameForm();
-        AddressForm eaForm = new AddressForm();
+        NameForm newNForm = new NameForm();
+        AddressForm newAForm = new AddressForm();
         public static string currentFName;
         public static string currentLName;
         public static int currentID;
@@ -52,7 +52,7 @@ namespace Final_Seed
             currentFName = GridView.Rows[currentRow].Cells[1].Value.ToString();
             currentLName = GridView.Rows[currentRow].Cells[2].Value.ToString();
 
-            enForm.ShowDialog();
+            newNForm.ShowDialog();
 
             createDataContext();
         }
@@ -69,7 +69,7 @@ namespace Final_Seed
             currentS = GridView.Rows[currentRow].Cells[5].Value.ToString();
             currentZip = GridView.Rows[currentRow].Cells[6].Value.ToString();
 
-            eaForm.ShowDialog();
+            newAForm.ShowDialog();
 
             createDataContext();
         }
